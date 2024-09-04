@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: url(photo-1589307004173-3c95204d00ee.jfif);
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: cursive;
+            color: rgb(12, 64, 109);
+            text-align: center;
+        }
+
+        #counter {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+            margin-right: 40px;
+        }
+
+        #increment{
+           display: inline-block;
+           margin-right: 40px;
+        }
+
+        #reset{
+           display: block;
+           margin: 0 auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: cursive;
+            color: rgb(12, 90, 158);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Counter Application</h1>
+
+    
+
+    <button id="increment" onclick="increment()">Increment (+)</button>
+    <p id="counter">0</p>
+    <button id="decrement" onclick="decrement()">Decrement (-)</button>
+
+    <button id="reset" onclick="reset()">Reset</button>
+    
+    <script>
+
+       let count = 0;
+       document.getElementById('counter').innerText = count;
+
+        function increment() {
+            count++;
+            document.getElementById('counter').innerText = count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById('counter').innerText = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById('counter').innerText = count;
+        }
+    </script>
+</body>
+</html>
